@@ -53,6 +53,18 @@ st.sidebar.info("🔱 **Kassio - FOUNDER ELITE**")
 st.sidebar.write("📍 Localização: Solo Validado")
 st.sidebar.write("⚖️ Status: Global Compliance OK")
 
+# --- NOVO: SISTEMA DE COMPARTILHAMENTO ---
+st.sidebar.markdown("---")
+st.sidebar.subheader("📢 Expandir a Rede")
+link_convite = "https://green-card.streamlit.app" 
+mensagem_zap = f"Venha minerar ativos no solo com a Green Card! Acesse: {link_convite}"
+
+if st.sidebar.button("Compartilhar via WhatsApp"):
+    # Gera o link que abre o WhatsApp com a mensagem pronta
+    link_final = f"https://wa.me/?text={mensagem_zap.replace(' ', '%20')}"
+    st.sidebar.markdown(f"[Clica aqui para enviar]({link_final})")
+
+
 # --- DASHBOARD PRINCIPAL (CONTADOR MAINNET) ---
 st.title("🏛️ Green Card Sovereign")
 col_count, col_status = st.columns([2, 1])
